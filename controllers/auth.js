@@ -6,7 +6,7 @@ const login = (req, res) => {
     const { email, password } = req.body
 
     users.findUserByCredentials(email, password).then((user) => {
-        const token = jwt.sign({_id: user._id}, 'secret-key', {expiresIn: 3600});
+        const token = jwt.sign({_id: user._id}, 'some-secret-key', {expiresIn: 3600});
         return { user, token }
     }).then(({ user, token }) => {
         res.status(200).send({
