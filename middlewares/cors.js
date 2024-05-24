@@ -1,5 +1,6 @@
 const allowedCors = [
     "https://pirdie.nomoredomainswork.ru",
+    "https://gigan.nomoredomainswork.ru",
     "http://localhost:3001",
     "http://localhost:3000",
   ]; 
